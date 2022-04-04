@@ -1,14 +1,17 @@
-# Plugin-Template
+# Media Controls Plugin
 
-This is the template plugin for developing plugins for the [SteamOS Plugin Loader](https://github.com/SteamDeckHomebrew/PluginLoader).
+This is very WIP plugin for adding the native (MPRIS) media controls to the [SteamOS Plugin Loader](https://github.com/SteamDeckHomebrew/PluginLoader).
 
-## Usage
+![Plugin image](./.images/plugin.png)
 
-1. Click on the green `Use this template` button to create a new repository for your plugin
-2. Rename the `plugin_template.py` file to something unique
-3. Add your code to the plugin python file
-4. To use it, simply copy the file to the `/home/deck/homebrew/plugins` folder on your Steam Deck
+## Changes Required to the Plugin Loader
 
-## License
+To load the plugin, I had to do the following changes to the `plugin_loader.service` from the Plugin Loader in order to be able to connect to the User's info instead of the Root's. Hopefully this won't be required for future versions
 
-This Template Project is under The Unlicense. You may license your own plugin under whatever license you prefer.
+```
+[Service]
+User=deck
+Group=deck
+Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+...
+```
