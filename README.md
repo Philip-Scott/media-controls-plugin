@@ -4,6 +4,7 @@ This is very WIP plugin for adding the native (MPRIS) media controls to the [Ste
 
 ![Plugin image](./.images/plugin.png)
 
+
 ## Changes Required to the Plugin Loader
 
 To load the plugin, I had to do the following changes to the `plugin_loader.service` from the Plugin Loader in order to be able to connect to the User's info instead of the Root's. Hopefully this won't be required for future versions
