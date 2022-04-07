@@ -1,0 +1,33 @@
+name: "CI"
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '16.x'
+
+    - run: npm install -g yarn
+
+    - run: yarn
+
+    - run: yarn build
+
+    - run: ./bundle.sh
+
+    - name: Release Plugin
+      uses: marvinpinto/action-automatic-releases@latest
+      with:
+        title: media-controls-plugin
+        automatic_release_tag: continuous
+        prerelease: true
+        draft: false
+        files: |
+          media-controls-plugin.zip
+        repo_token: ${{ secrets.GITHUB_TOKEN }}

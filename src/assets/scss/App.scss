@@ -1,0 +1,127 @@
+.player {
+  box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
+  border-radius: 6px;
+  height: 254px;
+  margin: 12px 12px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: rgb(237, 235, 247);
+}
+
+.media_art {
+  width: 170px;
+  height: 170px;
+  margin-top: 4px;
+  margin-left: -20px;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 18px;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.media_art:before {
+  content: "";
+  background: inherit;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 10px 40px 0px rgba(76, 70, 124, .50);
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 28px;
+  transform: scale(0.8);
+  filter: blur(10px);
+  opacity: 0.9;
+  border-radius: 24px;
+}
+
+.media_art:after {
+  content: "";
+  background: inherit;
+  width: 100%;
+  height: 100%;
+  box-shadow: 4px 4px 11px 0px rgba(76, 70, 124, .50);
+  display: block;
+  z-index: 2;
+  position: absolute;
+  border-radius: 15px;
+}
+
+.media_info {
+  position: absolute;
+  top: 200px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  z-index: 1;
+}
+
+.song_title {
+  font-weight: 600;
+  margin: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.song_artist {
+  margin: 0px 5px;
+  font-weight: lighter;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.blur {
+  filter: blur(15px);
+  overflow: hidden;
+  width: 100%;
+}
+
+.media_controls {
+  position: absolute;
+  display: flex;
+  top: 96px;
+  right: 8px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 51px;
+  z-index: 1;
+}
+
+.media_button {
+  color: #3d3d3d;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.media_button.play_button {
+  background: transparent;
+  margin: 0 8px 0 6px;
+  border-radius: 50%;
+  border: solid 4px currentColor;
+  padding: 4px;
+  width: 68px;
+  height: 68px;
+  display: inline-block;
+}
