@@ -3,6 +3,8 @@
 rm -rf ./releaseBundle
 mkdir ./releaseBundle
 
+
+cp -r pip ./releaseBundle
 cp index.html ./releaseBundle
 cp -r dist ./releaseBundle
 cp main.py ./releaseBundle

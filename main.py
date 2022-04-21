@@ -1,3 +1,7 @@
+### Ugly hack until we figure out how to bundle in python dependencies...
+import sys
+sys.path.insert(0,'/home/deck/homebrew/plugins/media-controls-plugin/pip')
+
 import subprocess
 import dbus
 import sys
