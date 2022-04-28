@@ -5,7 +5,7 @@
     "tile_view_html": "",
     "flags": ["_hot_reload"],
     "publish": {
-        "discord_id": "philip-scott#1808",
+        "discord_id": "136961206727606272",
         "description": "Control music and video playback from the quick access menu",
         "tags": ["media", "music", "mpris"]
     }
