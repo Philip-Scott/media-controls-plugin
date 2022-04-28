@@ -3,5 +3,10 @@
     "author": "Felipe Escoto",
     "main_view_html": "index.html",
     "tile_view_html": "",
-    "flags": ["_hot_reload"]
+    "flags": ["_hot_reload"],
+    "publish": {
+        "discord_id": "philip-scott#1808",
+        "description": "Control music and video playback from the quick access menu",
+        "tags": ["media", "music", "mpris"]
+    }
 }

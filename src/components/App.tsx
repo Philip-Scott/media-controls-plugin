@@ -14,7 +14,7 @@ function MediaControls() {
   }
 
   React.useEffect(() => {
-    fetchData()
+    fetchData().catch()
   }, []);
 
   React.useEffect(() => {
