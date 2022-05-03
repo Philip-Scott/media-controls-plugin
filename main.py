@@ -1,3 +1,8 @@
+### Since the plugin loader has "root" env variables, we need to manually add the known bus address here
+### This will break if SteamOS ever adds support to multiple Linux users, but for now it's a safe asumption to make.
+import os
+os.environ["DBUS_SESSION_BUS_ADDRESS"] = "unix:path=/run/user/1000/bus"
+
 ### Ugly hack until we figure out how to bundle in python dependencies...
 import sys
 sys.path.insert(0,'/home/deck/homebrew/plugins/media-controls-plugin/pip')
